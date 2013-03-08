@@ -37,6 +37,9 @@
 		<!-- drop Google Analytics Here -->
 		<!-- end analytics -->
 
+	<link rel="stylesheet/less" type="text/css" href="<?php echo home_url('wp-content/themes/eddiemachado-bones-95c6a47/library/less/style.less'); ?>" />
+	<script src="<?php echo home_url('wp-content/themes/eddiemachado-bones-95c6a47/library/js/libs/less-1.3.3.min.js'); ?>"></script>
+
 	</head>
 
 	<body <?php body_class(); ?>>

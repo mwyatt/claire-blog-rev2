@@ -49,7 +49,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
 
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'bones-thumb-300', 300, 140, true );
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you

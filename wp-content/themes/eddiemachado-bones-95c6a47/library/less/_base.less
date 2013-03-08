@@ -36,7 +36,7 @@ and will be used across all viewports.
 
 body {
 	background: url('../images/45degreee_fabric.png') repeat;
-	font-family: @sans-serif;
+	font-family: @serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: #565656;
@@ -49,7 +49,16 @@ body {
 ********************/
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
+.home {
+
+	article {
+		img {
+			max-width: 100%;
+		}
+		h1 {}
+	}
+
+	}                          /* home page */
 .blog {}                          /* blog template page */
 .archive {}                       /* archive page */
 .date {}                          /* date archive page */
@@ -131,7 +140,7 @@ a, a:visited {
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: @sans-serif;
+	font-family: @serif;
 	text-rendering: optimizelegibility;
 	font-weight: 400;
 	/*
@@ -177,6 +186,7 @@ h5, .h5 {
 *********************/
 
 .header {
+
 	#inner-header {
 		padding: 30px 0;
 		text-align: center;
@@ -240,8 +250,6 @@ and more scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
-	border-bottom: 0;
 
 	li {
 
@@ -316,9 +324,16 @@ and more scalable.
 *********************/
 
 #content {
+	text-align: left;
 	margin-top: 2.2em;
 
-	#inner-content {}
+	#inner-content {
+
+	}
+}
+
+.cover {
+	display: none;
 }
 
 		.hentry {
