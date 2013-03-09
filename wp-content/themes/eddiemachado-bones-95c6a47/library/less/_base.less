@@ -63,8 +63,19 @@ body {
 		margin: 0 0 30px;
 		padding: 0 0 20px;
 
+		p.time {
+			text-align: center;
+			font-family: arial;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: rgb(115, 108, 98);
+			font-size: 0.9em;
+			letter-spacing: 0.2em;
+		}
+
 		img {
 			max-width: 100%;
+			height: auto;
 			margin: 0 0 13px;
 		}
 
@@ -120,6 +131,10 @@ body {
 	margin: 0 auto;
 }
 
+.thumb-600 {
+	display: none;
+}
+
 /*********************
 04. LINK STYLES
 *********************/
@@ -163,13 +178,6 @@ a.button {
 	background-color: #cc6699;
 	color: #f5e9ef;
 	border-bottom: 1px solid #995475;
-	
-	&.green {
-		background-color: rgb(185, 217, 193);
-		color: rgb(66, 102, 75);
-		border-bottom: 1px solid rgb(148, 200, 160);
-		display: block;
-	}
 
 	&:hover {
 		background-color: rgb(233, 131, 182);
@@ -239,6 +247,22 @@ h5, .h5 {
 		text-align: center;
 	}
 
+	.button.green {
+		background-color: rgb(185, 217, 193);
+		color: rgb(66, 102, 75);
+		border-bottom: 1px solid rgb(148, 200, 160);
+		display: block;
+
+		&:hover {
+			color: lighten(rgb(66, 102, 75), 5%);
+			background-color: lighten(rgb(185, 217, 193), 5%);
+		}
+
+		&:active {
+			background-color: darken(rgb(185, 217, 193), 10%);
+		}
+	}
+
 	.logo {
 		background: url('../images/sprite-300.png') -43px -115px no-repeat;
 		text-indent: -999em;
@@ -246,16 +270,14 @@ h5, .h5 {
 		width: 214px;
 		height: 71px;
 		margin: 0 auto 30px;
+
+		&:hover { 
+			// .opacity (.5);
+		}
 	}
 
 	.flower {
 		display: none;
-		// float: right;
-		// background: url('../images/sprite-300.png') -331px -89px no-repeat;
-		// text-indent: -999em;
-		// display: block;
-		// width: 236px;
-		// height: 115px;
 	}
 
 	.nav {
@@ -657,6 +679,10 @@ p.tags {
 10. COMMENT STYLES
 ******************************************************************/
 
+.alert {
+	display: none;
+}
+
 /* h3 comment title */
 #comments {
 
@@ -960,6 +986,28 @@ p.tags {
 .footer {
 	clear: both;
 	#inner-footer {
+	}
+	.profile {
+		background-color: rgb(242, 239, 241);
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+		padding: 20px;
+		margin: 0 0 30px;
+		h3 {
+			color: #669933;
+			font-size: 1em;
+			margin: 0 0 .8em;
+			text-transform: uppercase;
+		}
+		p {
+			color: #646e77;
+		}
+		img {
+			margin: 0 0 18px;
+		}
+		h3, p {
+			width: 100%;
+		}
 	}
 	nav {
 		ul.nav {

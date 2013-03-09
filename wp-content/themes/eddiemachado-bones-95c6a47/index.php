@@ -20,11 +20,13 @@
 						
 						    <header class="article-header">
 							
-						    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo the_post_thumbnail('bones-thumb-300'); ?></a>
+						    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="thumb-300"><?php echo the_post_thumbnail('bones-thumb-300'); ?></a>
+
+						    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="thumb-600"><?php echo the_post_thumbnail('bones-thumb-600'); ?></a>
 
 							    <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h1>
 
-                  				<p class="byline vcard"><?php get_the_time(get_option('date_format')); ?></p>
+                  				<p class="time"><?php the_time(get_option('date_format')); ?></p>
 						
 						    </header> <!-- end article header -->
 					
