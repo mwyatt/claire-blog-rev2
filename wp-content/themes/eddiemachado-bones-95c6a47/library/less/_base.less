@@ -27,12 +27,19 @@ and will be used across all viewports.
 
 ******************************************************************/
 
-
+// temp removal of admin bar, annoying
+#wpadminbar {
+	display: none !important;
+}
 
 
 /*********************
 01. GENERAL STYLES
 *********************/
+
+html {
+	margin: 0 !important;
+}
 
 body {
 	background: url('../images/45degreee_fabric.png') repeat;
@@ -52,9 +59,15 @@ body {
 .home {
 
 	article {
+		border-bottom: 1px solid rgb(204, 204, 204);
+		margin: 0 0 30px;
+		padding: 0 0 20px;
+
 		img {
 			max-width: 100%;
+			margin: 0 0 13px;
 		}
+
 		h1 {}
 	}
 
@@ -103,7 +116,7 @@ body {
 }
 
 .wrap {
-	width: 96%;
+	padding: 20px;
 	margin: 0 auto;
 }
 
@@ -113,6 +126,7 @@ body {
 
 a, a:visited {
 	color: @link-color;
+	.transition ();
 
 	/* on hover */
 	&:hover, &:focus {
@@ -132,6 +146,38 @@ a, a:visited {
 		for mobile devices.
 		*/
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+a.button {
+	.border-radius (9em);
+	font-size: 0.875em;
+	padding: 7px 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: arial, sans-serif;
+	margin: 0 auto 30px;
+
+	// default style: pink
+	background-color: #cc6699;
+	color: #f5e9ef;
+	border-bottom: 1px solid #995475;
+	
+	&.green {
+		background-color: rgb(185, 217, 193);
+		color: rgb(66, 102, 75);
+		border-bottom: 1px solid rgb(148, 200, 160);
+		display: block;
+	}
+
+	&:hover {
+		background-color: rgb(233, 131, 182);
+		color: @white;
+	}
+
+	&:active {
+		background-color: rgb(165, 67, 116);
 	}
 }
 
@@ -157,6 +203,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+	margin: 0;
 }
 
 h2, .h2 {
@@ -188,7 +235,7 @@ h5, .h5 {
 .header {
 
 	#inner-header {
-		padding: 30px 0;
+		padding: 20px;
 		text-align: center;
 	}
 
@@ -198,19 +245,7 @@ h5, .h5 {
 		display: block;
 		width: 214px;
 		height: 71px;
-		margin: 0 auto 20px;
-	}
-
-	.button {
-		.border-radius (9em);
-		font-size: 0.875em;
-		background: #b9d9c1;
-		padding: 7px 15px;
-		border-bottom: 1px solid #94c8a0;
-		color: #42664b;
-		text-transform: uppercase;
-		text-decoration: none;
-		font-weight: bold;
+		margin: 0 auto 30px;
 	}
 
 	.flower {
@@ -223,9 +258,9 @@ h5, .h5 {
 		// height: 115px;
 	}
 
-	nav {
-		clear: both;
-		ul.nav {
+	.nav {
+		ul {
+			margin: 0 0 20px;
 			li {
 				a {}
 
@@ -256,7 +291,7 @@ and more scalable.
 		a {
 			display: block;
 			text-decoration: none;
-			padding: 10px 10px;
+			padding: 10px;
 			background-color: #eee;
 			border-bottom: 1px solid #ccc;
 
@@ -325,10 +360,9 @@ and more scalable.
 
 #content {
 	text-align: left;
-	margin-top: 2.2em;
 
 	#inner-content {
-
+		padding-top: 0;
 	}
 }
 
@@ -372,6 +406,7 @@ and more scalable.
 
 		/* entry content */
 		.entry-content {
+			margin: 0 0 20px;
 
 			p {}
 
@@ -484,6 +519,28 @@ and more scalable.
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+
+p.tags {
+	text-align: left;
+	margin: 0;
+
+	a {
+		.border-radius (3px);
+		border: 1px solid rgb(197, 197, 197);
+		background: rgb(238, 238, 238);
+		padding: 5px 9px;
+		text-decoration: none;
+		font-family: arial;
+		text-transform: uppercase;
+		font-size: 0.7em;
+		margin: 0 4px 4px 0;
+		color: rgb(102, 102, 102);
+	}
+}
+
+.article-footer {
+	text-align: right;
+}
 
 /******************************************************************
 09. PAGE NAVI STYLES
@@ -869,7 +926,9 @@ and more scalable.
 12. SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+	display: none;
+}
 
 	.widgettitle {}
 

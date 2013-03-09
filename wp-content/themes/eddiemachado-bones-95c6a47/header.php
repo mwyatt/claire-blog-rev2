@@ -57,13 +57,11 @@
 					<!-- if you'd like to use the site description you can un-comment it below -->
 					<?php // bloginfo('description'); ?>
 
-					<a href="#" class="button">l'histoire complète</a>
+					<a href="#" class="button green">l'histoire complète</a>
 					
 					<a href="#" class="flower">a propos de moi</a>
 
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
+					<?php bones_main_nav(); ?>
 
 				</div> <!-- end #inner-header -->
 
